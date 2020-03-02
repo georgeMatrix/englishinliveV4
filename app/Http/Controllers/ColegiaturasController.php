@@ -9,8 +9,12 @@ use Yajra\DataTables\Facades\DataTables;
 
 class ColegiaturasController extends Controller
 {
+    public function eliminar($id){
+        $colegiaturas = Colegiaturas::where('id','=', $id)->update(['status' => 'inactive']);
+    }
+
     public function getColegiaturas(){
-        $colegiaturas = DB::table('colegiaturas');
+        $colegiaturas = DB::table('colegiaturas')->where('status', '=', 'active');
         return Datatables::of($colegiaturas)
             ->addColumn('actions', 'colegiaturas/actions')
             ->rawColumns(['actions'])

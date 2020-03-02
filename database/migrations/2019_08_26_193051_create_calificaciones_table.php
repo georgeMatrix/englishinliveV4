@@ -17,13 +17,14 @@ class CreateCalificacionesTable extends Migration
             $table->increments('id');
             $table->string('noControl');
             $table->string('maestro');
+            $table->string('adultoNino');
 
             $table->string('alumno');
-            $table->string('icInicial1stTest')->nullable();
-            $table->string('icInicial2stTest')->nullable();
-            $table->string('icInicial3stTest')->nullable();
-            $table->string('workbook')->nullable();
-            $table->string('icInicialPlataformaYtareas')->nullable();
+            $table->string('icInicial1stTest')->nullable();     ///este
+            $table->string('icInicial2stTest')->nullable();     ///este
+            $table->string('icInicial3stTest')->nullable();     ///este
+            $table->string('workbook')->nullable();             ///este
+            $table->string('icInicialPlataformaYtareas')->nullable(); ///este
             $table->string('icInicialFinalScore')->nullable();
 
             $table->string('icInicialParticipation')->nullable();
@@ -67,7 +68,7 @@ class CreateCalificacionesTable extends Migration
             $table->string('icIntermedioApplication')->nullable();
             $table->string('icIntermedioPresentation')->nullable();
             $table->string('icIntermedioTestScore')->nullable();
-
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

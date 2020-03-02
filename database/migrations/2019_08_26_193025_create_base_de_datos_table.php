@@ -36,6 +36,7 @@ class CreateBaseDeDatosTable extends Migration
             $table->string('email');
             $table->string('grado_estudios');
             $table->string('como_te_enteraste');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

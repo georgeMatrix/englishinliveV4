@@ -9,34 +9,34 @@
                     {{method_field('PATCH')}}
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->grupo}}" id="grupo" name="grupo" placeholder="Grupo">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->grupo}}" id="grupo" name="grupo" placeholder="Grupo">
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->escolaridad}}" id="escolaridad" name="escolaridad" placeholder="Escolaridad">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->escolaridad}}" id="escolaridad" name="escolaridad" placeholder="Escolaridad">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->noControl}}" id="noControl" name="noControl" placeholder="No. de control">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->noControl}}" id="noControl" name="noControl" placeholder="No. de control">
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->cicloEscolar}}" id="cicloEscolar" name="cicloEscolar" placeholder="Ciclo escolar">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->cicloEscolar}}" id="cicloEscolar" name="cicloEscolar" placeholder="Ciclo escolar">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->edad}}" id="edad" name="edad" placeholder="Edad">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->edad}}" id="edad" name="edad" placeholder="Edad">
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->incorporados}}" id="incorporados" name="incorporados" placeholder="Incorporados">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->incorporados}}" id="incorporados" name="incorporados" placeholder="Incorporados">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->sexo}}" id="sexo" name="sexo" placeholder="Sexo">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->sexo}}" id="sexo" name="sexo" placeholder="Sexo">
                         </div>
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <select name="niveles" id="niveles" class="form-control form-control-user">
+                            <select required name="niveles" id="niveles" class="form-control form-control-user">
                                 <option value="">Seleccione una opción</option>
                                 <option value="1" {{$controlEscolar->niveles == 1 ? 'selected':''}}>Ingles Comunicativo</option>
                                 <option value="2" {{$controlEscolar->niveles == 2 ? 'selected':''}}>Ingles Comunicativo Superior</option>
@@ -47,26 +47,26 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->maestro}}" id="maestro" name="maestro" placeholder="Maestro">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->maestro}}" id="maestro" name="maestro" placeholder="Maestro">
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->horarioSep}}" id="horarioSep" name="horarioSep" placeholder="Horario SEP">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->horarioSep}}" id="horarioSep" name="horarioSep" placeholder="Horario SEP">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->curp}}" id="curp" name="curp" placeholder="CURP">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->curp}}" id="curp" name="curp" placeholder="CURP">
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->horario}}" id="horario" name="horario" placeholder="Horario">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->horario}}" id="horario" name="horario" placeholder="Horario">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->modulosAcreditados}}" id="modulosAcreditados" name="modulosAcreditados" placeholder="Modulos Acreditados">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->modulosAcreditados}}" id="modulosAcreditados" name="modulosAcreditados" placeholder="Modulos Acreditados">
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" class="form-control form-control-user" value="{{$controlEscolar->nombreCompleto}}" id="nombreCompleto" name="nombreCompleto" placeholder="Nombre Completo">
+                            <input required type="text" class="form-control form-control-user" value="{{$controlEscolar->nombreCompleto}}" id="nombreCompleto" name="nombreCompleto" placeholder="Nombre Completo">
                         </div>
                     </div>
                     <div class="form-group row">

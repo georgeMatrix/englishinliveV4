@@ -9,10 +9,10 @@
         </div>
         <div class="row">
             <div class="col-lg-2 col-md-2 col-md-2 col-xs-2 offset-xl-8 offset-md-8 offset-xs-8 mb-3">
-                <a class="btn btn-success btn-block" href="{{route('calificaciones.create')}}" >NUEVO</a>
+{{--                <a class="btn btn-success btn-block" href="{{route('calificaciones.create')}}" >NUEVO</a>--}}
             </div>
             <div class="col-lg-2 col-md-2 col-md-2 col-xs-2 mb-3">
-                <a class="btn btn-success btn-block" href="#" >CATALOGO</a>
+                <a class="btn btn-success btn-block" href="{{route('calificaciones.create')}}" >NUEVO</a>
             </div>
         </div>
         <div class="row">
@@ -28,6 +28,12 @@
 @endsection
 @section('scripts')
     <script>
+        function deleteRecord(id) {
+            fetch('api/eliminarCalificaciones/' + id)
+            let table = $('#calificaciones').DataTable();
+            table.ajax.reload();
+        }
+
         $(document).ready( function () {
             $('#calificaciones').DataTable({
                 ajax:{

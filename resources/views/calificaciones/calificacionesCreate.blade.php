@@ -13,11 +13,17 @@
                 </div>
 
                 <div class="form-group row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <input required type="text" class="form-control form-control-user" id="maestro" name="maestro" placeholder="Maestro">
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <input required type="text" class="form-control form-control-user" id="alumno" name="alumno" placeholder="Nombre de Alumno">
+                    </div>
+                    <div class="col-sm-4">
+                        <select name="adultoNino" id="adultoNino" class="form-control">
+                            <option value="adulto">Adulto</option>
+                            <option value="nino">Niño</option>
+                        </select>
                     </div>
                 </div>
 

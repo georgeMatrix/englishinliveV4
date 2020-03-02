@@ -27,6 +27,7 @@ class CreateCertificacionesTable extends Migration
             $table->string('speakingScore');
             $table->string('cambridgeEnglishScale');
             $table->string('certificateResult');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

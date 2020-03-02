@@ -14,50 +14,50 @@
                     {{method_field('PATCH')}}
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input value="{{$certificacion->nombre}}" type="text" class="form-control form-control-user" id="nombre" name="nombre" placeholder="Nombre">
+                            <input required value="{{$certificacion->nombre}}" type="text" class="form-control form-control-user" id="nombre" name="nombre" placeholder="Nombre">
                         </div>
                         <div class="col-sm-6">
-                            <input value="{{$certificacion->fechaCertificacion}}" type="text" class="form-control form-control-user" id="fechaCertificacion" name="fechaCertificacion" placeholder="Fecha de certificación">
+                            <input required value="{{$certificacion->fechaCertificacion}}" type="text" class="form-control form-control-user" id="fechaCertificacion" name="fechaCertificacion" placeholder="Fecha de certificación">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input value="{{$certificacion->entidad}}" type="text" class="form-control form-control-user" id="entidad" name="entidad" placeholder="Entidad">
+                            <input required value="{{$certificacion->entidad}}" type="text" class="form-control form-control-user" id="entidad" name="entidad" placeholder="Entidad">
                         </div>
                         <div class="col-sm-6">
-                            <input value="{{$certificacion->resultado}}" type="text" class="form-control form-control-user" id="resultado" name="resultado" placeholder="Resultado">
+                            <input required value="{{$certificacion->resultado}}" type="text" class="form-control form-control-user" id="resultado" name="resultado" placeholder="Resultado">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input value="{{$certificacion->resultadoGeneral}}" type="text" class="form-control form-control-user" id="resultadoGeneral" name="resultadoGeneral" placeholder="Resultado General">
+                            <input required value="{{$certificacion->resultadoGeneral}}" type="text" class="form-control form-control-user" id="resultadoGeneral" name="resultadoGeneral" placeholder="Resultado General">
                         </div>
                         <div class="col-sm-6">
-                            <input value="{{$certificacion->cefrLevel}}" type="text" class="form-control form-control-user" id="cefrLevel" name="cefrLevel" placeholder="CEFR Level">
+                            <input required value="{{$certificacion->cefrLevel}}" type="text" class="form-control form-control-user" id="cefrLevel" name="cefrLevel" placeholder="CEFR Level">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input value="{{$certificacion->readingScore}}" type="text" class="form-control form-control-user" id="readingScore" name="readingScore" placeholder="Reading Score">
+                            <input required value="{{$certificacion->readingScore}}" type="text" class="form-control form-control-user" id="readingScore" name="readingScore" placeholder="Reading Score">
                         </div>
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input value="{{$certificacion->writingScore}}" type="text" class="form-control form-control-user" id="writingScore" name="writingScore" placeholder="Writing Score">
+                            <input required value="{{$certificacion->writingScore}}" type="text" class="form-control form-control-user" id="writingScore" name="writingScore" placeholder="Writing Score">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <input value="{{$certificacion->listeningScore}}" type="text" class="form-control form-control-user" id="listeningScore" name="listeningScore" placeholder="Listening Score">
+                            <input required value="{{$certificacion->listeningScore}}" type="text" class="form-control form-control-user" id="listeningScore" name="listeningScore" placeholder="Listening Score">
                         </div>
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input value="{{$certificacion->speakingScore}}" type="text" class="form-control form-control-user" id="speakingScore" name="speakingScore" placeholder="Speaking Score">
+                            <input required value="{{$certificacion->speakingScore}}" type="text" class="form-control form-control-user" id="speakingScore" name="speakingScore" placeholder="Speaking Score">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-6">
-                            <input value="{{$certificacion->cambridgeEnglishScale}}" type="text" class="form-control form-control-user" id="cambridgeEnglishScale" name="cambridgeEnglishScale" placeholder="Cambridge English Scale">
+                            <input required value="{{$certificacion->cambridgeEnglishScale}}" type="text" class="form-control form-control-user" id="cambridgeEnglishScale" name="cambridgeEnglishScale" placeholder="Cambridge English Scale">
                         </div>
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                            <input value="{{$certificacion->cambridgeEnglishScale}}" type="text" class="form-control form-control-user" id="certificateResult" name="certificateResult" placeholder="Certificate Result">
+                            <input required value="{{$certificacion->cambridgeEnglishScale}}" type="text" class="form-control form-control-user" id="certificateResult" name="certificateResult" placeholder="Certificate Result">
                         </div>
                     </div>
 

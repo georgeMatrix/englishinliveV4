@@ -3,14 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\BaseDeDatos;
+use App\Http\Requests\BaseDeDatosRequest;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Yajra\DataTables\Facades\DataTables;
 
 class BaseDeDatosController extends Controller
 {
+    public function eliminar($id){
+        $baseDeDatos = BaseDeDatos::where('id','=', $id)->update(['status' => 'inactive']);
+    }
+
     public function getBaseDeDatos(){
-        $baseDeDatos = DB::table('base_de_datos');
+        $baseDeDatos = DB::table('base_de_datos')->where('status', '=', 'active');
         return Datatables::of($baseDeDatos)
             ->addColumn('actions', 'baseDeDatos/actions')
             ->rawColumns(['actions'])
@@ -43,7 +48,7 @@ class BaseDeDatosController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BaseDeDatosRequest $request)
     {
         //return $request;
         BaseDeDatos::create($request->all());
@@ -70,6 +75,7 @@ class BaseDeDatosController extends Controller
     public function edit($id)
     {
         $baseDeDatos = BaseDeDatos::findOrFail($id);
+        //dd($baseDeDatos);
         return view('baseDeDatos/baseDeDatosEdit')
             ->with('baseDeDatos', $baseDeDatos);
     }
@@ -81,7 +87,7 @@ class BaseDeDatosController extends Controller
      * @param  \App\BaseDeDatos  $baseDeDatos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BaseDeDatosRequest $request, $id)
     {
         $baseDatos = $request->except(['_token', '_method']);
         BaseDeDatos::where('id', '=', $id)->update($baseDatos);

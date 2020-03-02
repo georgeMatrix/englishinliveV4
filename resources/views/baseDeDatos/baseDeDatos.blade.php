@@ -24,6 +24,12 @@
 
 @section('scripts')
     <script>
+        function deleteRecord(id) {
+            fetch('api/eliminarBaseDeDatos/' + id)
+            let table = $('#baseDeDatosTable').DataTable();
+            table.ajax.reload();
+        }
+
         $(document).ready( function () {
             $('#baseDeDatosTable').DataTable({
                 ajax:{

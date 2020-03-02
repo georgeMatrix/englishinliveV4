@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>ENGLISH IN LIVE</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
@@ -38,8 +38,8 @@
         }
     </style>
     <!-- DataTables -->
-    <link rel="stylesheet" href="dataTables/dataTables.css">
-    <script src="dataTables/datatables.min.js"></script>
+    <link rel="stylesheet" href="{{asset('dataTables/datatables.css')}}">
+    <script src="{{asset('dataTables/datatables.min.js')}}"></script>
 
 </head>
 <body>

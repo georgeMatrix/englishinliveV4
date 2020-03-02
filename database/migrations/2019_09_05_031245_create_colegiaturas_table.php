@@ -21,6 +21,7 @@ class CreateColegiaturasTable extends Migration
             $table->string('inscripcion');
             $table->string('libros');
             $table->string('certificadoSep');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

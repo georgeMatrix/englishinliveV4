@@ -23,12 +23,13 @@ Auth::routes([
     'verify' => false, // Email Verification Routes...
 ]);
 
-//Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
-Route::resource('controlEscolar', 'ControlEscolarController');
-Route::resource('baseDeDatos', 'BaseDeDatosController');
-Route::resource('calificaciones', 'CalificacionesController');
-Route::resource('colegiaturas', 'ColegiaturasController');
-Route::resource('certificaciones', 'CertificacionesController');
-Route::resource('bajas', 'BajasController');
-Route::resource('clientePrueba', 'ClientePruebaController');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::resource('controlEscolar', 'ControlEscolarController')->middleware('auth');
+Route::resource('baseDeDatos', 'BaseDeDatosController')->middleware('auth');
+Route::resource('calificaciones', 'CalificacionesController')->middleware('auth');
+Route::resource('colegiaturas', 'ColegiaturasController')->middleware('auth');
+Route::resource('certificaciones', 'CertificacionesController')->middleware('auth');
+Route::resource('bajas', 'BajasController')->middleware('auth');
+Route::resource('clientePrueba', 'ClientePruebaController')->middleware('auth');
+Route::get('getPdf/{id}/{status}', 'CalificacionesController@getPdf');
 

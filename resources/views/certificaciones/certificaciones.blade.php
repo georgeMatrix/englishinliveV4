@@ -23,6 +23,12 @@
 @endsection
 @section('scripts')
     <script>
+        function deleteRecord(id) {
+            fetch('api/eliminarCertificaciones/' + id)
+            let table = $('#certificacionesTable').DataTable();
+            table.ajax.reload();
+        }
+
         $(document).ready( function () {
             $('#certificacionesTable').DataTable({
                 ajax:{

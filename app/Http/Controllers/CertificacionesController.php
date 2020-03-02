@@ -9,8 +9,12 @@ use Yajra\DataTables\Facades\DataTables;
 
 class CertificacionesController extends Controller
 {
+    public function eliminar($id){
+        $certificaciones = Certificaciones::where('id','=', $id)->update(['status' => 'inactive']);
+    }
+
     public function getCertificaciones(){
-        $certificaciones = DB::table('certificaciones');
+        $certificaciones = DB::table('certificaciones')->where('status', '=', 'active');
         return Datatables::of($certificaciones)
             ->addColumn('actions', 'certificaciones/actions')
             ->rawColumns(['actions'])

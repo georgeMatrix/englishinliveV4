@@ -22,6 +22,7 @@
     </div>
 @endsection
 @section('scripts')
+    <script src="js/controlEscolar/controlEscolar.js"></script>
     <script>
         $(document).ready( function () {
             $('#controlEscolarTable').DataTable({

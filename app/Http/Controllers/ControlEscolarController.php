@@ -10,6 +10,10 @@ use Yajra\DataTables\Facades\DataTables;
 
 class ControlEscolarController extends Controller
 {
+    public function eliminar($id){
+        $controlEscolar = ControlEscolar::where('id','=', $id)->update(['status' => 'inactive']);
+    }
+
     public function getControlEscolar(){
         $controlEscolar = DB::table('control_escolars')->where('status', '=', 'active');
         return Datatables::of($controlEscolar)
